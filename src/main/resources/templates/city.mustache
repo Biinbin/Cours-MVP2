@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Liste des villes</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+
+<body>
+    <h1>Liste des villes</h1>
+    <table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Population</th>            
+            <th>Pays</th>
+        </tr>
+<a href="/city/add"> Ajouter une ville </a> 
+    </thead>
+        {{#cities}}
+         <tr>
+                <td>{{country.id}}</td>
+                <td>{{name}}</td>
+                <td>{{population}}</td>
+                <td>{{country.id}}</td>
+                <td>
+                    <a href="/city/edit/{{id}}">Modifier</a> 
+                    <a href="/city/delete/{{id}}">Supprimer</a>
+		</td>
+            </tr>
+        {{/cities}}
+    </table>
+</body>
+</html>
